@@ -119,17 +119,19 @@ void opcontrol() {
 
   std::uint32_t shoulder_hold = 0, elbow_hold = 0;
 
-  std::bool attack_mode = false;
+  bool attack_mode = false;
 
-  std::bool a_was_pressed = false;
-  std::bool b_was_pressed = false;
-  std::bool x_was_pressed = false;
-  std::bool y_was_pressed = false;
+  bool a_was_pressed = false;
+  bool b_was_pressed = false;
+  bool x_was_pressed = false;
+  bool y_was_pressed = false;
 
-  std::bool was_pressed = false;
+  bool was_pressed = false;
 
-  std::bool l1_was_pressed = false;
-  std::bool l2_was_pressed = false;
+  bool l1_was_pressed = false;
+  bool l2_was_pressed = false;
+
+  bool precision_mode = false;
 
   std::uint32_t flash_counter = 0;
 
@@ -206,9 +208,9 @@ void opcontrol() {
       elbow_hold = 0;
     }
 
-    // Percision mode 
+    // Precision mode 
     if (master.get_digital(DIGITAL_UP)) {
-      percision_mode = !percision_mode;
+      precision_mode = !precision_mode;
     }
 
     // Flash screens when in attack mode 
