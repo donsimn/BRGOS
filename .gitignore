@@ -42,3 +42,6 @@ temp.log
 temp.errors
 *.ini
 .d/
+
+# CodeQL
+_codeql_detected_source_root
